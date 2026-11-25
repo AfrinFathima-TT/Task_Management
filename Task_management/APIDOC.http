@@ -1,0 +1,67 @@
+###
+POST http://127.0.0.1:8000/api/register/
+Content-Type: application/json
+
+{
+    "username":"Liya",
+    "email": "liya@gmail.com",
+    "password":"liya@123"
+}
+
+###
+POST  http://127.0.0.1:8000/api/login/
+Content-Type: application/json
+
+{
+    "username" : "Hiba",
+    "password" : "hiba@123"
+}
+
+
+###
+GET http://127.0.0.1:8000/api/task/
+Accept: application/json
+Authorization: Token 
+
+
+###
+POST http://127.0.0.1:8000/api/task/
+Content-Type: application/json
+Authorization: Token
+
+{
+    "title":"Puthon to find factorial",
+    "description":"write a python program to find factorial of a number",
+    "due_date":2026-12-23,
+    "status":"Pending"
+}
+
+
+###
+GET http://127.0.0.1:8000/api/task/1/
+Accept: application/json
+Authorization: Token
+
+
+###
+PUT http://127.0.0.1:8000/api/task/1/
+Content-Type: application/json
+Authorization: Token
+
+{
+    "title":"Puthon to find factorial",
+    "description":"write a python program to find factorial of a number",
+    "due_date":2026-12-28,
+    "status":"Pending"
+}
+
+
+DELETE http://127.0.0.1:8000/api/task/1/
+Authorization: Token
+
+
+
+###
+GET http://127.0.0.1:8000/logout
+Accept: application/json
+Authorization: Token
